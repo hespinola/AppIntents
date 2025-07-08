@@ -22,7 +22,8 @@ struct Listing: Codable, Identifiable, AppEntity {
     var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(
             title: LocalizedStringResource(stringLiteral: title),
-            subtitle: LocalizedStringResource(stringLiteral: price)
+            subtitle: LocalizedStringResource(stringLiteral: price),
+            image: DisplayRepresentation.Image(named: image)
         )
     }
 }
