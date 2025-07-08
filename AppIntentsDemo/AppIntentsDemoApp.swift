@@ -11,7 +11,7 @@ import SwiftUI
 struct AppIntentsDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListingListView(listings: ListingProvider.load(ListingProvider.listings))
         }
     }
 }
