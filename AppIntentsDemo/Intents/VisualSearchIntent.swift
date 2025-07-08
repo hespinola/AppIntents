@@ -5,7 +5,6 @@
 //  Created by Humberto Espinola on 7/8/25.
 //
 
-#if canImport(VisualIntelligence)
 import AppIntents
 import VisualIntelligence
 
@@ -17,9 +16,7 @@ struct VisualSearchIntent: IntentValueQuery {
         // Here we'd normally get the pixelBuffer from the SemanticContentDescriptor
         // For demo purposes, this does not process the real image and does not hit any network endpoint
         
-        let listings = ListingProvider.load(ListingProvider.listings)
+        let listings: [Listing] = ListingProvider.load(ListingProvider.listings)
         return listings
     }
 }
-
-#endif
